@@ -53,7 +53,8 @@ class Api extends EventEmitter {
 		autoBind(this);
 
 		this.options = Object.assign({match: []}, options);
-		this.options.require = resolveModules(arrify(this.options.require).concat('ts-node/register'));
+		// Also require tsconfig-paths, in order to use baseURL in tsconfig.
+		this.options.require = resolveModules(arrify(this.options.require).concat('ts-node/register', 'tsconfig-paths/register'));
 	}
 
 	_runFile(file, runStatus, execArgv) {
