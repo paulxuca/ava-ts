@@ -1,5 +1,5 @@
 {
-	"name": "ava-ts",
+	"name": "@logojoy/ava-ts",
 	"version": "0.24.5",
 	"description": "Fork of the AVA test runner with native typescript support 🚀",
 	"license": "MIT",
